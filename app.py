@@ -27,6 +27,10 @@ from database import (
     remove_served_chat
 )
 
+import pyrogram.utils
+
+pyrogram.utils.MIN_CHANNEL_ID = -1009999999999
+
 app = Client(
     "Fake_mail_bot",
     api_hash = "f8a1b21a13af154596e2ff5bed164860",
