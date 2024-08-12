@@ -5,6 +5,6 @@ COPY . /app.py
 
 RUN pip3 install -U pip
 COPY needs.txt .
-RUN pip3 install -r needs.txt
+RUN pip3 install -r needss.txt
 
 CMD ["python", "app.py"]
