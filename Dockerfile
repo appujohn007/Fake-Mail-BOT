@@ -4,7 +4,7 @@ WORKDIR /app.py
 COPY . /app.py
 
 RUN pip3 install -U pip
-COPY needs.txt .
+COPY needss.txt .
 RUN pip3 install -r needss.txt
 
 CMD ["python", "app.py"]
