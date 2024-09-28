@@ -10,6 +10,8 @@ import requests
 import random
 import bs4
 
+from threading import Thread
+from flask import Flask
 from pykeyboard import InlineKeyboard
 from pyrogram.errors import UserNotParticipant
 from pyrogram import filters, Client
@@ -26,6 +28,23 @@ from database import (
     add_served_chat,
     remove_served_chat
 )
+
+
+app = Flask(__name__)
+
+# Define the endpoint
+@app.route('/')
+def hello_world():
+    return 'Hello World'
+
+def run_flask():
+    app.run(host='0.0.0.0', port=8080)
+
+# Start the Flask app in a new thread
+flask_thread = Thread(target=run_flask)
+flask_thread.daemon = True
+flask_thread.start()
+
 
 import pyrogram.utils
 
@@ -297,4 +316,11 @@ Broadcast Completed:.""")
 
 
 print("I'm Alive Now!")
-app.run()
+if __name__ == '__main__':
+    # Start Flask server
+    flask_thread = Thread(target=run_flask)
+    flask_thread.daemon = True
+    flask_thread.start()
+
+    # Start Pyrogram bot
+    app.run()
