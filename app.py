@@ -35,7 +35,7 @@ app = Client(
     "Fake_mail_bot",
     api_hash = "f8a1b21a13af154596e2ff5bed164860",
     api_id= 10471716,
-    bot_token = "6916875347:AAEVxR4cO_sIBB6V57ANA92pHKxzw9G3yX0"
+    bot_token = "7362057028:AAHUPHU4BI6d46DlYkMVgPSbbHEwu1Okrrk"
 )
 
 #********************************************************************************
@@ -53,9 +53,9 @@ Send /domains to get list of Available Domains.
 **Developer** : @Appuz_007 | @botio_devs
 """
 
-CHANNEL_ID = int(os.environ['CHANNEL_ID'])
-CHANNEL = os.environ['CHANNEL']
-OWNER = int(os.environ['OWNER'])
+CHANNEL_ID = int(2054575318)
+CHANNEL = "botio_devs
+OWNER = int(6883997969)
 
 start_button = InlineKeyboardMarkup(
             [
