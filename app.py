@@ -50,7 +50,7 @@ I can create **temp emails** for you. Send /new to **create new mail** !
 
 Send /domains to get list of Available Domains.
 
-**Developer** : @ImDenuwan | @szteambots 
+**Developer** : @Appuz_007 | @botio_devs
 """
 
 CHANNEL_ID = int(os.environ['CHANNEL_ID'])
@@ -60,12 +60,9 @@ OWNER = int(os.environ['OWNER'])
 start_button = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("👥 Group", url="https://t.me/slbotzone"),
-                    InlineKeyboardButton("🗣 Channel", url="https://t.me/szteambots")
+                    InlineKeyboardButton("👥 Group", url="https://t.me/botio_devs_discuss"),
+                    InlineKeyboardButton("🗣 Channel", url="https://t.me/botio_devs")
                 ],
-		        [
-                    InlineKeyboardButton("➕Add to Group ➕", url=f"http://t.me/szFakeMailBot?startgroup=new"),
-                ]    
             ]
 )
 
@@ -79,8 +76,7 @@ async def start(_, message: Message):
 			text=f"""
 🚧 **Access Denied** {message.from_user.mention}
 You must,
-🔹[join Our Telegram Channel](https://t.me/{CHANNEL}).
-@szteambots
+🔹[join Our Telegram Channel](https://t.me/{CHANNEL})
 """)
        return
     name = message.from_user.id
@@ -104,7 +100,7 @@ API3='https://www.1secmail.com/api/v1/?action=readMessage&login='
 #********************************************************************************
 
 create = InlineKeyboardMarkup(
-            [[InlineKeyboardButton("SZ team bots 🇱🇰", url="https://t.me/szteambots")]])
+            [[InlineKeyboardButton(".io devs 💻", url="https://t.me/botio_devs")]])
 
 #********************************************************************************
 @app.on_message(filters.command("new"))
@@ -122,7 +118,7 @@ async def fakemailgen(_, message: Message):
 **📬Done,Your Email Address Created!**
 📧 **Email** : `{email}@{domain}`
 📨 **Mail BOX** : `empty`
-**Powered by** : @szteambots """,
+**Powered by** : @botio_devs ❤️""",
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("♻️ Update Mail BOX ♻️", callback_data = f"mailbox |{email}|{domain}")]]))
     pi = await mes.pin(disable_notification=True, both_sides=True)
     await m.delete()
@@ -299,23 +295,6 @@ async def broadcast_message(_, message):
     await m.edit(f"""
 Broadcast Completed:.""")    
 
-@app.on_message(filters.command("ads"))
-async def ads_message(_, message):
-    await message.reply_text(
-"""     📮Advertise On Telegram 🚀
-
-Want to promote anything ? 
-
-Rose Bot is here with your basic needs. We work in around 2.5 thousand chats with thousand of userbase. One promotional broadcast reaches to thousands of peoples. 
-
-Want to promote your online business ? Want to get people engagement? We are here!
-
-Promote whatever you want at lowest and affordable prices.
-
-https://telega.io/catalog_bots/szrosebot/card
-
-🔥Your broadcast will reach group also so minimum 50k users see your message.
-""")
 
 print("I'm Alive Now!")
 app.run()
