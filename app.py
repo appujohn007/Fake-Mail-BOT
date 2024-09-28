@@ -54,7 +54,7 @@ Send /domains to get list of Available Domains.
 """
 
 CHANNEL_ID = int(2054575318)
-CHANNEL = "botio_devs
+CHANNEL = "botio_devs"
 OWNER = int(6883997969)
 
 start_button = InlineKeyboardMarkup(
