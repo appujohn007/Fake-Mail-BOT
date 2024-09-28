@@ -5,6 +5,7 @@ pymongo[srv]
 motor
 asyncio
 requests
+Flask
 wget
 lxml
 pykeyboard
