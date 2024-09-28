@@ -53,7 +53,7 @@ Send /domains to get list of Available Domains.
 **Developer** : @Appuz_007 | @botio_devs
 """
 
-CHANNEL_ID = int(2054575318)
+CHANNEL_ID = int(-1002054575318)
 CHANNEL = "botio_devs"
 OWNER = int(6883997969)
 
