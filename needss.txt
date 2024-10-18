@@ -1,8 +1,7 @@
 pyrogram
 TgCrypto
-pymongo
-pymongo[srv]
-motor
+motor==3.2 
+pymongo==4.3.3
 asyncio
 requests
 Flask
