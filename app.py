@@ -38,7 +38,7 @@ def hello_world():
     return 'Hello World'
 
 def run_flask():
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=25587)
 
 # Start the Flask app in a new thread
 flask_thread = Thread(target=run_flask)
