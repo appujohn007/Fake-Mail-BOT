@@ -6,7 +6,7 @@ WORKDIR /app.py
 COPY . /app.py
 
 RUN pip3 install -U pip
-COPY needss.txt .
+COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 
 EXPOSE 8080 
