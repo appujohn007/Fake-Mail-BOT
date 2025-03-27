@@ -7,6 +7,8 @@ COPY . /app.py
 
 RUN pip3 install -U pip
 COPY needss.txt .
-RUN pip3 install -r needss.txt
+RUN pip3 install -r requirements.txt
+
+EXPOSE 8080 
 
 CMD ["python", "app.py"]
