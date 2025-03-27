@@ -1,9 +1,3 @@
-#=================================================================================================
-# Copyright (C) 2022 by szsupunma@Github, < https://github.com/szsupunma >.
-# Released under the "GNU v3.0 License Agreement".
-# All rights reserved.
-#=================================================================================================
-
 import os
 import asyncio
 import requests
@@ -30,15 +24,15 @@ from database import (
 )
 
 
-app = Flask(__name__)
+web_app = Flask(__name__)
 
 # Define the endpoint
-@app.route('/')
+@web_app.route('/')
 def hello_world():
     return 'Hello World'
 
 def run_flask():
-    app.run(host='0.0.0.0', port=25587)
+    web_app.run(host='0.0.0.0', port=8080)
 
 # Start the Flask app in a new thread
 flask_thread = Thread(target=run_flask)
